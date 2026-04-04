@@ -1,0 +1,658 @@
+
+
+/* DARK MODE */
+:root {
+    --main : #ff0037;
+    --white : #f1f1f1;
+    --txt : #a3a4a8;
+    --black: #25272b;
+    --black2: #26292c;
+    --shadow: #16181a6c;
+    --icon: #16181a;
+    --border: #2f3238;
+    
+    /* NEUTRAL COLORS */
+    --lightWhite : #f1f1f1;
+    --lightTxt : #a3a4a8;
+    --lightBlack: #25272b;
+    --lightBlack2: #26292c;
+    --lightShadow: #16181a6c;
+}
+
+/* LIGHT MODE */
+
+/* 
+:root {
+    --main : #ff0037;
+    --white : #202225;
+    --txt : #86878d;
+    --black: #f7f7f7;
+    --black2: #f7f7f7;
+    --shadow: #cacaca4d;
+    --icon: #d3d3d3;
+    --border: #d3d3d3;
+} */
+
+
+@font-face {
+    font-family: googleSans;
+    color: rgb(255, 0, 55);
+    src: url(../css/fonts/ProductSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: googleSansLight;
+    src: url(../css/fonts/ProductSans-Light.ttf);
+}
+
+@font-face {
+    font-family: googleSansBold;
+    src: url(../css/fonts/ProductSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: googleSansBlack;
+    src: url(../css/fonts/ProductSans-Black.ttf);
+}
+
+@font-face {
+    font-family: rebeka;
+    src: url(../css/fonts/ChangaOne-Regular.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: googleSansLight;
+    transition: ease-in-out 0.3s;
+}
+
+section {
+    border-bottom: 2px dashed var(--border);
+}
+
+.borderBottom {
+    border-bottom: 2px dashed var(--border);
+}
+
+body {
+    background-color: var(--black) !important;
+    width: 100%;
+}
+
+.button a {
+    font-family: googleSansLight;
+    font-size: 12px;
+    color: var( --lightWhite );
+    text-decoration: none;
+    padding: 12px 28px;
+    border: 1px solid var(--main);
+    border-radius: 100px;
+}
+
+.button .btn3 {
+    border: none;
+    padding: 0px;
+    font-size: 16px;
+    color: var(--white);
+}
+
+.btn1 {
+    background-color: var(--main);
+}
+
+.btn1:hover {
+    background-color: transparent;
+    color: var(--white) !important;
+}
+
+.btn2 {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.btn2:hover {
+    background-color: var(--main);
+    color: var(--lightWhite);
+}
+
+.txt p {
+    color: var(--txt);
+    font-size: 16px;
+    line-height: 22px;
+}
+
+h3 {
+    color: var(--white) !important;
+    font-size: 25px !important;
+    font-family: googleSansBold !important;
+}
+
+h3 a {
+    text-decoration: none !important;
+    font-size: 25px;
+    color: var(--main);
+    font-family: googleSansBlack;
+
+}
+
+.title {
+    color: var(--white) !important;
+    font-size: 19px !important;
+    font-family: googleSansBold !important;
+}
+
+.heading p {
+    font-size: 12px;
+    color: var(--main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    line-height: 0px;
+    margin-bottom: 10px;
+}
+
+/* .heading h2{
+    position: relative;
+    display: flex;
+    align-items: center;
+} */
+
+.heading h2 {
+    font-size: 47px;
+    text-decoration: none;
+    color: var(--white);
+    font-family: rebeka;
+    line-height: 45px;
+}
+
+
+/* ======== header ======== */
+
+
+
+header {
+    background-color: var(--black);
+    box-shadow: 1px 1px 15px var(--shadow);
+    z-index: 2;
+}
+
+
+header #logo a{
+    font-size: 45px;
+    text-decoration: none;
+    color: var(--white);
+    font-family: rebeka;
+}
+
+
+header #links {
+    text-align: end;
+}
+
+header #links a {
+    font-size: 16px;
+    font-family: googleSansLight;
+    text-decoration: none;
+    color: var(--txt);
+    margin: 20px;
+}
+
+
+/* ======== Nav-Icon ======== */
+
+header .navIcon .icon {
+    width: 50px;
+    height: 50px;
+}
+
+header .navIcon .icon .lines div {
+    width: 24px;
+    height: 2px;
+    background-color: var(--txt);
+    margin: 4px 0px;
+}
+
+header .navIcon .icon div:nth-child(2) {
+    width: 16px;
+}
+
+
+
+/* ======== Hero ======== */
+
+
+.hero img {
+    width: 100%;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: lighter;
+}
+
+.hero h1 p {
+    font-family: googleSansLight;
+}
+
+
+.hero h1 span{
+    color: var(--main);
+    font-family: googleSansLight;
+}
+
+.hero h1 p:nth-child(2){
+    font-family: googleSansLight;
+    position: relative;
+}
+
+.hero h1 p:nth-child(2){
+    font-size: 70px;
+    font-family: rebeka;
+    line-height: 40px;
+}
+
+.findMe .icons a {
+    text-decoration: none;
+}
+
+.findMe .icons i {
+    width: 50px;
+    height: 50px;
+    background-color: var(--icon);
+    border-radius: 2px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--txt);
+}
+
+.findMe .icons i:hover {
+    background-color: var(--main);
+    color: var(--lightWhite);
+}
+
+.hero .languages {
+
+    background-color: var(--black2);
+    box-shadow: 0px 0px 15px var(--shadow);
+}
+
+.hero .languages div {
+    color: #4e4e4e8e;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+/* ======== MY-STACK ======== */
+
+
+
+.myStack .stackBox {
+    padding: 10px;
+}
+
+.myStack .stackBox div {
+    padding: 15px;
+    box-shadow: 1px 1px 15px var(--shadow);
+    border: 1px solid var(--black2);
+    border-radius: 5px;
+    color: var(--txt);
+    font-size: 16px;
+}
+
+
+
+
+/* ======== My-Process ======== */
+
+
+.myProcess {
+    background-color: var(--lightBlack);
+}
+
+.myProcess h3 {
+    color: var(--lightWhite) !important;
+}
+
+.myProcess .heading h2 {
+    color: var(--lightWhite);
+}
+
+.myProcess .processOne,
+.myProcess .processTwo,
+.myProcess .processThree {
+    height: 150px;
+}
+
+.myProcess h3 span {
+    font-size: 12px;
+}
+
+.myProcess .processOne .divide,
+.myProcess .processTwo .divide,
+.myProcess .processThree .divide {
+    width: 2px;
+    height: 100%;
+    background-color: var(--lightTxt);
+}
+
+.myProcess .processOne .divide::before,
+.myProcess .processTwo .divide::before,
+.myProcess .processThree .divide::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    height: 10px;
+    width: 10px;
+    background-color: var(--lightTxt);
+    border-radius: 50%;
+}
+
+.myProcess .processTwo .divide::before {
+    top: unset;
+}
+
+.myProcess .processThree .divide::before {
+    top: unset;
+    bottom: 0px;
+}
+
+
+
+/* ======== Projects ======== */
+
+    
+.project .projectBox {
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.project .news .projectBox {
+    border: none !important;
+}
+
+.counter {
+    background-color: var(--main);
+}
+
+.project .projectBox img {
+    border-radius: 10px;
+}
+
+.counter .counterBox p {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    color: var(--lightWhite);
+}
+
+.counter .counterBox span {
+    font-size: 60px;
+    font-family: googlesansBold;
+    margin-right: 17px;
+}
+
+
+/* ======== Clients ======== */
+
+
+.clients .box {
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.clients .box .img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.clients .box .img img {
+    width: 100%;
+}
+
+.clients .box .user p {
+    line-height: 0px;
+}
+/* 
+.clients .box .name {
+    
+} */
+
+
+
+
+
+
+
+
+
+
+/* ======== Media Query ======== */
+
+@media (max-width: 1200px){
+
+    /* ======== Hero ======== */
+
+    .hero h1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .hero h1 p:nth-child(2){
+        font-size: 60px;
+    }
+    
+}
+
+@media (max-width: 992px){
+
+    /* ======== Hero ======== */
+
+
+    header {
+        overflow: hidden;
+        transition: height 0.7s !important;
+        height: 99px;
+    }
+
+    .hActive {
+        height: 430px;
+    }
+
+    header nav #links{
+        position: absolute;
+        bottom: -332px;
+        left: 0px;
+        width: 100%;
+        border-top: 1px solid var(--shadow);
+    }
+    
+    header nav #links a {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    header nav #links a:hover {
+        background-color: var(--black2);
+    }
+
+
+    /* ======== Nav-Icon ======== */
+
+    header .navIcon .icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header .nActive .icon .lines div {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin: 0px !important;
+        background-color: var(--main);
+    }
+
+    header .nActive .icon .lines div:nth-child(1) {
+        transform: rotate(135deg) !important;
+    }
+    
+    header .nActive .icon .lines div:nth-child(2) {
+        display: none;
+    }
+
+    header .nActive .icon .lines div:nth-child(3) {
+        transform: rotate(45deg);
+    }
+
+
+    /* ======== Hero ======== */
+
+    .hero h1 {
+        font-size: 23px;
+        line-height: 43px;
+        text-align: center;
+    }
+
+    .hero h1 p:nth-child(2){
+        font-size: 75px;
+    }
+
+    .findMe .icons div {
+        width: 60px;
+        height: 60px;
+    }
+
+    
+    /* ======== My-Process ======== */
+    
+    
+    
+    .myProcess .processOne,
+    .myProcess .processTwo,
+    .myProcess .processThree {
+        height: 170px;
+    }
+
+
+    /* ======== My-Process ======== */
+
+    .counter .counterBox p {
+        flex-direction: column;
+    }
+    
+    .counter .counterBox span {
+        margin: 0px 0px 20px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    /* ======== Hero ======== */
+
+    .hero h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .hero h1 p:nth-child(2){
+        font-size: 60px;
+    }
+
+
+
+    /* ======== My-Process ======== */
+    
+    
+    
+    .myProcess .processOne,
+    .myProcess .processTwo,
+    .myProcess .processThree {
+        height: 180px;
+    }
+
+
+    /* ======== My-Process ======== */
+
+    h3 {
+        font-size: 20px !important;
+    }
+    
+    .title {
+        font-size: 18px !important;
+    }
+
+}
+
+@media (max-width: 540px){
+
+    /* ======== Hero ======== */
+
+    .hero h1 p:nth-child(2){
+        font-size: 55px;
+        line-height: 45px;
+    }
+
+    .heading h2 {
+        font-size: 35px;
+    }
+
+    .heading p {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 402px){
+
+    /* ======== Hero ======== */
+
+    .hero h1 {
+        font-size: 17px;
+        line-height: 16px;
+    }
+
+    .hero h1 p:nth-child(2){
+        font-size: 48px;
+    }
+
+
+
+    /* ======== My-Process ======== */
+
+
+
+    .myProcess .processOne,
+    .myProcess .processTwo,
+    .myProcess .processThree {
+        height: 220px;
+    }
+
+
+    
+    /* ======== My-Process ======== */
+
+    h3 {
+        font-size: 18px !important;
+    }
+    
+    .title {
+        font-size: 17px !important;
+    }
+
+}
