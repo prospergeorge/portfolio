@@ -1,18 +1,18 @@
-
-
 /* DARK MODE */
 :root {
     --main : #ff0037;
-    --white : #f1f1f1;
+    --white : #fdfdfd;
     --txt : #a3a4a8;
     --black: #25272b;
     --black2: #26292c;
     --shadow: #16181a6c;
+    --shadow2: #d1d1d1d5;
     --icon: #16181a;
-    --border: #2f3238;
+    --border: #32343b;
+    --inputBg: #f1f1f1b7;
     
     /* NEUTRAL COLORS */
-    --lightWhite : #f1f1f1;
+    --lightWhite : #fdfdfd;
     --lightTxt : #a3a4a8;
     --lightBlack: #25272b;
     --lightBlack2: #26292c;
@@ -21,18 +21,19 @@
 
 /* LIGHT MODE */
 
-/* 
-:root {
+
+/* :root {
     --main : #ff0037;
-    --white : #202225;
-    --txt : #86878d;
-    --black: #f7f7f7;
-    --black2: #f7f7f7;
+    --white : rgb(32, 34, 37);
+    --txt : #7f818b;
+    --black: #fdfdfd;
+    --black2: #fcfcfc;
     --shadow: #cacaca4d;
-    --icon: #d3d3d3;
-    --border: #d3d3d3;
+    --icon: #e7e7e7;
+    --border: #e6e6e6;
 } */
 
+/* ======== Fonts ======== */
 
 @font-face {
     font-family: googleSans;
@@ -56,9 +57,11 @@
 }
 
 @font-face {
-    font-family: rebeka;
+    font-family: ChangaOne;
     src: url(../css/fonts/ChangaOne-Regular.ttf);
 }
+
+/* ======== General styling ======== */
 
 * {
     margin: 0px;
@@ -79,23 +82,25 @@ section {
 body {
     background-color: var(--black) !important;
     width: 100%;
+    overflow-x: hidden !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a *{
+    text-decoration: none;
 }
 
 .button a {
     font-family: googleSansLight;
     font-size: 12px;
-    color: var( --lightWhite );
+    color: var(--lightWhite);
     text-decoration: none;
-    padding: 12px 28px;
+    padding: 10px 28px;
     border: 1px solid var(--main);
-    border-radius: 100px;
-}
-
-.button .btn3 {
-    border: none;
-    padding: 0px;
-    font-size: 16px;
-    color: var(--white);
+    border-radius: 8px;
 }
 
 .btn1 {
@@ -117,10 +122,42 @@ body {
     color: var(--lightWhite);
 }
 
-.txt p {
+.button .btn3 {
+    border: none;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+button {
+    font-family: googleSansLight;
+    font-size: 12px;
+    color: var(--lightWhite);
+    text-decoration: none;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--main) !important;
+    color: var(--lightWhite) !important;
+    border-radius: 8px !important;
+}
+
+button:hover{
+    background-color: var(--lightBlack) !important;
+}
+
+button i {
+    color: var(--lightWhite);
+    font-size: 14px;
+}
+
+/* ======== General styling Continues ======== */
+
+.txt * {
     color: var(--txt);
     font-size: 16px;
-    line-height: 22px;
+    line-height: 32px;
 }
 
 h3 {
@@ -163,7 +200,7 @@ h3 a {
     font-size: 47px;
     text-decoration: none;
     color: var(--white);
-    font-family: rebeka;
+    font-family: ChangaOne;
     line-height: 45px;
 }
 
@@ -183,7 +220,7 @@ header #logo a{
     font-size: 45px;
     text-decoration: none;
     color: var(--white);
-    font-family: rebeka;
+    font-family: ChangaOne;
 }
 
 
@@ -200,7 +237,7 @@ header #links a {
 }
 
 
-/* ======== Nav-Icon ======== */
+/* ======== Nav-Toggle ======== */
 
 header .navIcon .icon {
     width: 50px;
@@ -251,7 +288,7 @@ header .navIcon .icon div:nth-child(2) {
 
 .hero h1 p:nth-child(2){
     font-size: 70px;
-    font-family: rebeka;
+    font-family: ChangaOne;
     line-height: 40px;
 }
 
@@ -285,7 +322,7 @@ header .navIcon .icon div:nth-child(2) {
 .hero .languages div {
     color: #4e4e4e8e;
     font-size: 18px;
-    text-align: center;
+
 }
 
 
@@ -294,17 +331,26 @@ header .navIcon .icon div:nth-child(2) {
 
 
 
-.myStack .stackBox {
-    padding: 10px;
+.aboutMe .stackBox>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 15px var(--shadow);
+    margin: 10px 0px;
+    height: 120px;
+    border-radius: 8px;
 }
 
-.myStack .stackBox div {
-    padding: 15px;
-    box-shadow: 1px 1px 15px var(--shadow);
-    border: 1px solid var(--black2);
-    border-radius: 5px;
-    color: var(--txt);
+.aboutMe .stackBox img {
+    width: 40px;
+}
+
+.aboutMe .stackBox .name {
+    color: var(--white);
     font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
 }
 
 
@@ -325,27 +371,21 @@ header .navIcon .icon div:nth-child(2) {
     color: var(--lightWhite);
 }
 
-.myProcess .processOne,
-.myProcess .processTwo,
-.myProcess .processThree {
-    height: 150px;
+.myProcess .thick {
+    height: 180px;
 }
 
 .myProcess h3 span {
     font-size: 12px;
 }
 
-.myProcess .processOne .divide,
-.myProcess .processTwo .divide,
-.myProcess .processThree .divide {
+.myProcess .thick .divide {
     width: 2px;
     height: 100%;
     background-color: var(--lightTxt);
 }
 
-.myProcess .processOne .divide::before,
-.myProcess .processTwo .divide::before,
-.myProcess .processThree .divide::before {
+.myProcess .thick .divide::before{
     content: "";
     position: absolute;
     top: 0px;
@@ -355,27 +395,29 @@ header .navIcon .icon div:nth-child(2) {
     border-radius: 50%;
 }
 
-.myProcess .processTwo .divide::before {
-    top: unset;
+/* ======== Stop Button from changing color when we switch to light mode ======== */
+
+.btnLight a:hover {
+    color: var(--lightWhite) !important;
 }
 
-.myProcess .processThree .divide::before {
-    top: unset;
-    bottom: 0px;
-}
 
 
 
 /* ======== Projects ======== */
 
-    
 .project .projectBox {
-    border: 1px solid var(--border);
-    border-radius: 15px;
+  border: 1px solid var(--border);
+  padding: 15px 5px 5px 8px;
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .project .news .projectBox {
-    border: none !important;
+  padding: 0px;
+  border: none;
 }
 
 .counter {
@@ -398,43 +440,62 @@ header .navIcon .icon div:nth-child(2) {
     font-size: 60px;
     font-family: googlesansBold;
     margin-right: 17px;
+    color: var(--lightWhite);
 }
 
 
-/* ======== Clients ======== */
 
+/*========== Contact Section ==========*/
 
-.clients .box {
-    border: 1px solid var(--border);
-    border-radius: 15px;
+.contact .mailto {
+    margin-top: -10px !important;
 }
 
-.clients .box .img {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    overflow: hidden;
+.contact .box {
+	background-color: var(--lightWhite);
+	border-radius: 20px;
+	padding: 55px 35px;
+    border: 1px solid var(--shadow2);
 }
 
-.clients .box .img img {
-    width: 100%;
+.contact .box .input i {
+	color: var(--lightTxt);
 }
 
-.clients .box .user p {
-    line-height: 0px;
+.contact .box .input {
+	width: 48.5%;
+	border-radius: 8px;
+	background-color: var(--inputBg);
+	height: 45px;
+	box-shadow: inset 2px 2px 6px var(--shadow2);
+	padding: 3px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-/* 
-.clients .box .name {
-    
-} */
 
+.contact .box .input input {
+	width: 85%;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
 
-
-
-
-
-
-
+.contact .box textarea {
+	width: 100%;
+	border-radius: 8px;
+	background-color: var(--inputBg);
+	height: 45px;
+	box-shadow: inset 2px 2px 6px var(--shadow2);
+	margin-bottom: 4px;
+	padding: 20px;
+	display: block;
+	height: 140px;
+	outline: none;
+    border: none;
+}
 
 
 /* ======== Media Query ======== */
@@ -542,15 +603,13 @@ header .navIcon .icon div:nth-child(2) {
     
     
     
-    .myProcess .processOne,
-    .myProcess .processTwo,
-    .myProcess .processThree {
-        height: 170px;
+    .myProcess .thick {
+        height: 210px;
     }
 
 
     /* ======== My-Process ======== */
-
+    
     .counter .counterBox p {
         flex-direction: column;
     }
@@ -558,7 +617,12 @@ header .navIcon .icon div:nth-child(2) {
     .counter .counterBox span {
         margin: 0px 0px 20px;
     }
+    
+    /* ======== My-Projects ======== */
 
+    .project .projectBox {
+        padding: 20px 5px;
+    }
 }
 
 @media (max-width: 768px){
@@ -580,10 +644,8 @@ header .navIcon .icon div:nth-child(2) {
     
     
     
-    .myProcess .processOne,
-    .myProcess .processTwo,
-    .myProcess .processThree {
-        height: 180px;
+    .myProcess .thick {
+        height: 230px;
     }
 
 
@@ -595,6 +657,13 @@ header .navIcon .icon div:nth-child(2) {
     
     .title {
         font-size: 18px !important;
+    }
+
+    /*========== Contact Section ==========*/
+
+
+    .contact .box .input {
+        width: 100%;
     }
 
 }
@@ -637,10 +706,8 @@ header .navIcon .icon div:nth-child(2) {
 
 
 
-    .myProcess .processOne,
-    .myProcess .processTwo,
-    .myProcess .processThree {
-        height: 220px;
+    .myProcess .thick {
+        height: 270px;
     }
 
 
