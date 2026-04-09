@@ -1,10 +1,12 @@
 /* DARK MODE */
 :root {
-    --main : #ff0037;
     --white : #fdfdfd;
+    --white2 : #ffffff;
+    --main : #ff0037;
     --txt : #a3a4a8;
     --black: #25272b;
     --black2: #26292c;
+    --iconBox: #282b30;
     --shadow: #16181a6c;
     --shadow2: #d1d1d1d5;
     --icon: #16181a;
@@ -22,22 +24,21 @@
 /* LIGHT MODE */
 
 
-/* :root {
+:root {
     --main : #ff0037;
-    --white : rgb(32, 34, 37);
+    --white : #202225;
     --txt : #7f818b;
     --black: #fdfdfd;
-    --black2: #fcfcfc;
+    --black2: #ffffff;
     --shadow: #cacaca4d;
     --icon: #e7e7e7;
     --border: #e6e6e6;
-} */
+}
 
 /* ======== Fonts ======== */
 
 @font-face {
     font-family: googleSans;
-    color: rgb(255, 0, 55);
     src: url(../css/fonts/ProductSans-Regular.ttf);
 }
 
@@ -100,7 +101,7 @@ a *{
     text-decoration: none;
     padding: 10px 28px;
     border: 1px solid var(--main);
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .btn1 {
@@ -137,10 +138,9 @@ button {
     text-decoration: none;
     padding: 10px 28px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px !important;
     background-color: var(--main) !important;
     color: var(--lightWhite) !important;
-    border-radius: 8px !important;
 }
 
 button:hover{
@@ -181,14 +181,31 @@ h3 a {
 }
 
 .heading p {
-    font-size: 12px;
-    color: var(--main);
-    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--white);
     letter-spacing: 2px;
     font-weight: bold;
     line-height: 0px;
     margin-bottom: 10px;
 }
+
+.heading .top {
+    position: absolute;
+	left: -4%;
+	top: 43px;
+	transform: rotate(270deg);
+    margin-bottom: 0px;
+}
+
+.heading .top::before {
+	height: 1px;
+	width: 35px;
+	background-color: var(--main);
+	content: "";
+	position: absolute;
+	left: -50px;
+}
+
 
 /* .heading h2{
     position: relative;
@@ -197,7 +214,7 @@ h3 a {
 } */
 
 .heading h2 {
-    font-size: 47px;
+    font-size: 45px;
     text-decoration: none;
     color: var(--white);
     font-family: ChangaOne;
@@ -211,7 +228,7 @@ h3 a {
 
 header {
     background-color: var(--black);
-    box-shadow: 1px 1px 15px var(--shadow);
+    box-shadow: 1px 1px 10px var(--shadow);
     z-index: 2;
 }
 
@@ -234,6 +251,10 @@ header #links a {
     text-decoration: none;
     color: var(--txt);
     margin: 20px;
+}
+
+header .active {
+    color: var(--main) !important;
 }
 
 
@@ -300,7 +321,6 @@ header .navIcon .icon div:nth-child(2) {
     width: 50px;
     height: 50px;
     background-color: var(--icon);
-    border-radius: 2px;
     margin-right: 15px;
     display: flex;
     align-items: center;
@@ -319,10 +339,10 @@ header .navIcon .icon div:nth-child(2) {
     box-shadow: 0px 0px 15px var(--shadow);
 }
 
-.hero .languages div {
+.hero .languages .item{
     color: #4e4e4e8e;
-    font-size: 18px;
-
+    font-size: 13px;
+    padding: 0px 15px;
 }
 
 
@@ -330,20 +350,23 @@ header .navIcon .icon div:nth-child(2) {
 /* ======== MY-STACK ======== */
 
 
+.aboutMe {
+    /* background-color: var(--black2); */
+}
+
 
 .aboutMe .stackBox>div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 1px 1px 15px var(--shadow);
-    margin: 10px 0px;
-    height: 120px;
-    border-radius: 8px;
+    box-shadow: 6px 6px 13px 0 rgba(0, 0, 0, 0.07);
+    height: 130px;
+    background-color: var(--black2);
 }
 
 .aboutMe .stackBox img {
-    width: 40px;
+    width: 37px;
 }
 
 .aboutMe .stackBox .name {
@@ -371,6 +394,10 @@ header .navIcon .icon div:nth-child(2) {
     color: var(--lightWhite);
 }
 
+.myProcess .heading p {
+    color: var(--lightWhite);
+}
+
 .myProcess .thick {
     height: 180px;
 }
@@ -382,7 +409,12 @@ header .navIcon .icon div:nth-child(2) {
 .myProcess .thick .divide {
     width: 2px;
     height: 100%;
-    background-color: var(--lightTxt);
+    background-color: var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 4px;
 }
 
 .myProcess .thick .divide::before{
@@ -391,7 +423,7 @@ header .navIcon .icon div:nth-child(2) {
     top: 0px;
     height: 10px;
     width: 10px;
-    background-color: var(--lightTxt);
+    background-color: var(--main);
     border-radius: 50%;
 }
 
@@ -515,7 +547,7 @@ header .navIcon .icon div:nth-child(2) {
     
 }
 
-@media (max-width: 992px){
+@media (max-width: 991px){
 
     /* ======== Hero ======== */
 
@@ -523,7 +555,7 @@ header .navIcon .icon div:nth-child(2) {
     header {
         overflow: hidden;
         transition: height 0.7s !important;
-        height: 99px;
+        height: 79px;
     }
 
     .hActive {
@@ -532,7 +564,7 @@ header .navIcon .icon div:nth-child(2) {
 
     header nav #links{
         position: absolute;
-        bottom: -332px;
+        bottom: -400px;
         left: 0px;
         width: 100%;
         border-top: 1px solid var(--shadow);
@@ -562,8 +594,6 @@ header .navIcon .icon div:nth-child(2) {
     
     header .nActive .icon .lines div {
         position: absolute;
-        top: 0px;
-        left: 0px;
         margin: 0px !important;
         background-color: var(--main);
     }
@@ -619,9 +649,15 @@ header .navIcon .icon div:nth-child(2) {
     }
     
     /* ======== My-Projects ======== */
-
+    
     .project .projectBox {
         padding: 20px 5px;
+    }
+
+    /* ======== Contact ======== */
+
+    .contact .box {
+        padding: 45px 25px;
     }
 }
 
@@ -678,11 +714,7 @@ header .navIcon .icon div:nth-child(2) {
     }
 
     .heading h2 {
-        font-size: 35px;
-    }
-
-    .heading p {
-        font-size: 10px;
+        font-size: 40px;
     }
 
 }
